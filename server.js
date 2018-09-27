@@ -13,7 +13,7 @@ var mongo = require('mongoDB');
 var mongoose = require('mongoose');
 
 //Connect to database
-mongoose.connect('mongodb://localhost/taskbook', { useNewUrlParser: true });
+mongoose.connect('mongodb://<dbuser>:<dbpassword>@ds117423.mlab.com:17423/heroku_qd4ng69t', { useNewUrlParser: true });
 
 
 mongoose.connection.once('open', function() {
