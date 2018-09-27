@@ -1,0 +1,510 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+/*Custom
+-------------------*/
+@font-face{
+    font-family: "SpasticNerfbag";
+    src: url('../fonts/SpasticNerfbag.ttf');
+}
+@font-face{
+    font-family: "software_tester_7";
+    src: url('../fonts/software_tester_7.ttf');
+}
+.app-wrapper {
+  position: fixed;
+  bottom: 100px;
+  right: 540px;
+}
+.app-dash {
+  backgound-image: none;
+   position: fixed;
+    bottom: 800px;
+    right: 840px;
+    width: 300px;
+}
+.dashIcon {
+  position: fixed;
+  bottom: 710px;
+  right: 1160px;
+  border: 1px solid black;
+  box-shadow: 5px 5px 2.5px black;
+}
+.dashIcon:hover {
+  border: 4px solid #3CF904;
+  box-shadow: 10px 10px 5px #3CF904;
+}
+
+.addnewIcon {
+  position: fixed;
+  bottom: 710px;
+  right: 1060px;
+  border: 1px solid black;
+  box-shadow: 5px 5px 2.5px black;
+}
+.addnewIcon:hover {
+  border: 4px solid #3CF904;
+  box-shadow: 10px 10px 5px #3CF904;
+}
+.deleteIcon {
+  position: fixed;
+  bottom: 710px;
+  right: 960px;
+  border: 1px solid black;
+  box-shadow: 5px 5px 2.5px black;
+}
+.deleteIcon:hover {
+  border: 4px solid #3CF904;
+  box-shadow: 10px 10px 5px #3CF904;
+}
+.saveIcon {
+  position: fixed;
+  bottom: 710px;
+  right: 860px;
+  border: 1px solid black;
+  box-shadow: 5px 5px 2.5px black;
+}
+.saveIcon:hover {
+  border: 4px solid #3CF904;
+  box-shadow: 10px 10px 5px #3CF904;
+}
+.inputPrime {
+  
+}
+button {
+  background-color: white;
+}
+.major {
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  box-shadow: 10px 10px 5px black;
+}
+.minor {
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  box-shadow: 5px 5px 2.5px black;
+}
+.chkBoxMajor {
+  margin-top: 5px;
+  height: 20px;
+  width: 20px;
+  box-shadow: 10px 10px 5px black;
+  background-color: transparent;
+}
+.chkBoxMajor:hover {
+  border: 2px solid #3CF904;
+  box-shadow: 10px 10px 5px #3CF904;
+}
+.checked { 
+  background-image: url("../media/checkmark.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.chkBoxMinor {
+  margin-top: 5px;
+  height: 15px;
+  width: 15px;
+  box-shadow: 5px 5px 2.5px black;
+  margin-left: 2px;
+}
+.chkBoxMinor:hover {
+  border: 2px solid #3CF904;
+  box-shadow: 10px 10px 5px #3CF904;
+}
+.fusedtask{
+  border: 3px solid blue;
+}
+.delete {
+  position: absolute;
+  right: 0;
+  vertical-align: center;
+}
+.delete:hover {
+  border: 2px solid black;
+  border-radius: 25px;
+}
+.plusfontsize {
+  font-size: x;
+}
+.vanish {
+  display: none
+}
+.stealth {
+  visibility: hidden;
+}
+.dashRoot {
+  position:absolute;
+  margin-left: 220px;
+  margin-top: -10px;
+}
+.dash {
+  position: relative;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    margin-left: 230px;
+    margin-top: 10px;
+}
+.primelabel {
+   margin-right: 5px;
+  font-family: Gatometrix;
+  font-size: 25px;
+  align-self: left;
+  width: 80%;
+}
+.ifBorder {
+ 
+}
+.styleStrip {
+  position: fixed;
+  right: 20px;
+  top: 75px;
+  background-color: black;
+  width: 500%;
+  height: 75px;
+  margin-top: 10px;
+  margin-right: -50px;
+}
+.sublabel {
+  margin-left: 50px;
+  align-self: left;
+  font-family: Gatometrix;
+  font-size: 15px;
+  width: 100%;
+  max-width: 330px;
+}
+.primeTask {
+  position: relative;
+}
+.taskPanel {
+  position: sticky;
+  text-align: left;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: auto;
+  width: 600px;
+  height: 600px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 5px;
+}
+.taskSheetLoader {
+  position: fixed;
+  top: 200px;
+  right: 500px;
+  margin-top: 5px;
+  width: 150px;
+  border: 1px solid black;
+  box-shadow: 10px 10px 5px black;
+  background-color: transparent;
+  z-index: 1;
+}
+
+
+ /* width */
+body ::-webkit-scrollbar {
+      width: 5px;
+      color: black;
+  }
+
+  /* Track */
+body ::-webkit-scrollbar-track {
+      background: black;
+}
+   
+  /* Handle */
+body ::-webkit-scrollbar-thumb {
+      background: yellow;
+}
+
+  /* Handle on hover */
+body ::-webkit-scrollbar-thumb:hover {
+      background: green; 
+  }
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+.bg { 
+  background-image: url("../media/bgroundimage.png");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.tg {
+  background-image: url("../media/taskground.png");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+
+/*
+ * Header
+ */
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 700px;
+  }
+}
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  margin-top: 4px;
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box; }
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #333;
+  border-color: #888;
+  outline: 0; }
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #FFF;
+  background-color: #33C3F0;
+  border-color: #33C3F0; }
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: #1EAEDB;
+  border-color: #1EAEDB; }
+
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  height: 28px;
+  padding: 0px 0px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box; }
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+
+.innercover {
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none; 
+min-height: 6px;
+padding-top: 6px;
+padding-bottom: 6px; 
+
+}
+.innercover button {
+  margin-top: 3px;
+}
+.innercover label,
+.innercover legend {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600; }
+.innercover fieldset {
+  padding: 0;
+  border-width: 0; }
+.innercover input[type="checkbox"],
+.innercover input[type="radio"] {
+  display: inline; }
+.innercover label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal; }
+}

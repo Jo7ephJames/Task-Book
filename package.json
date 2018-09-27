@@ -1,0 +1,26 @@
+{
+	"name": "taskbook",
+	"version": "1.0.0",
+	"description": "NestTodo With User Login",
+	"main": "server.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Joseph James",
+	"license": "ISC",
+	"dependencies": {
+		"bcryptjs": "*",
+		"body-parser": "*",
+		"connect-flash": "*",
+		"cookie-parser": "^1.4.1",
+		"express": "*",
+		"express-handlebars": "*",
+		"express-session": "*",
+		"express-validator": "*",
+		"mongodb": "*",
+		"mongoose": "*",
+		"passport": "*",
+		"passport-http": "*",
+		"passport-local": "*"
+	}
+}

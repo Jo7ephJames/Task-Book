@@ -1,0 +1,37 @@
+
+{{#if errors}}
+    {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+    {{/each}}
+{{else}}
+<h1 class="cover-heading">Register Account</h1>
+{{/if}}
+
+
+
+
+<form action="register" method="post">
+    <div>
+    	<label>Name:</label>
+        <input type="text" name="name" placeholder="Name"/>
+    </div>
+    <div>
+    	<label>Username:</label>
+        <input type="text" name="username" placeholder="Username"/>
+    </div>
+    <div>
+    	<label>Email:</label>
+        <input type="email" name="email" placeholder="Email"/>
+    </div>
+       <div>
+        <label>Password:</label>
+        <input type="password" name="password", placeholder="Password"/>
+    </div>
+      <div>
+        <label>Confirm Password:</label>
+        <input type="password" name="password2", placeholder="Password"/>
+    </div>
+    <div>
+        <input class="addspace" type="submit" value="Submit"/>
+    </div>
+</form>

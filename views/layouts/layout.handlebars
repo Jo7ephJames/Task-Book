@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<HTML>
+	<head>
+		<title>TaskDB</title>
+		<link rel="stylesheet" href="/css/bootstrap.css">
+		<link rel="stylesheet" href="/css/style.css">
+	</head>
+
+	<body class="bg">
+		<div class="site-wrapper"> 
+
+      <div class="site-wrapper-inner"> 
+
+       <div class="cover-container"> 
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">
+              {{#if user}}
+                Your Task Pad
+              {{else}}
+                Task Database
+              {{/if}}
+              </h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  {{#if user}}
+                    <li><a href="/users/taskbook"> Dashboard<a/><li>
+                    <li><a href="/users/logout">Logout</a></li>
+                  {{else}}
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/users/login">Login</a></li>
+                    <li><a href="/users/register">Register</a></li>
+                  {{/if}}
+                </ul>
+
+              </nav>
+              </div>
+                <div class="styleStrip">
+              </div>
+          </div>
+
+            {{#if user}}
+            <div class="app-dash">
+            </div>  
+              <div class="app-wrapper" class="tg">
+              {{{body}}}
+            </div>
+           {{else}}
+           <div class="innercover">
+              <p class="lead">
+            	 {{{body}}}
+              <p class="lead">
+            {{/if}} 
+            </p>
+            {{#if success_msg}}
+              <div class="alert alert-success">{{success_msg}}</div>
+            {{/if}}
+             {{#if error_msg}}
+              <div class="alert alert-danger">{{error_msg}}</div>
+            {{/if}}
+            {{#if error}}
+              <div class="alert alert-danger">{{error}}</div>
+            {{/if}}
+          </div>
+
+          <div class="mastfoot">
+            
+          </div>
+
+            <div class="inner">
+            
+	</body>
+</HTMl>
