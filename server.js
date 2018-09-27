@@ -12,7 +12,7 @@ var LocalStrategy = require('passport-local').Strategy
 var mongoose = require('mongoose');
 
 //Connect to database
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 
 
 mongoose.connection.once('open', function() {
