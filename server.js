@@ -12,7 +12,7 @@ var LocalStrategy = require('passport-local').Strategy
 var mongoose = require('mongoose');
 
 //Connect to database
-mongoose.connect('mongodb://<dbuser>:<dbpassword>@ds117423.mlab.com:17423/heroku_qd4ng69t', { useNewUrlParser: true });
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 
 mongoose.connection.once('open', function() {
