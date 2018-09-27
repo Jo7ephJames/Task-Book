@@ -21,8 +21,8 @@ mongoose.connection.once('open', function() {
 	console.log(error);
 })
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
+var routes = require('./app/routes/index');
+var users = require('./app/routes/users');
 
 var app = express();
 
