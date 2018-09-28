@@ -178,10 +178,10 @@ button {
   right: 20px;
   top: 75px;
   background-color: black;
-  width: 500%;
+  width: 3000px;
   height: 75px;
   margin-top: 10px;
-  margin-right: -50px;
+  margin-right: -100px;
 }
 .sublabel {
   margin-left: 50px;
