@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="/css/style.css">
 	</head>
 
-	<body class="bg">
+<body class="bg">
 		<div class="site-wrapper"> 
 
       <div class="site-wrapper-inner"> 
@@ -25,7 +25,7 @@
               <nav>
                 <ul class="nav masthead-nav">
                   {{#if user}}
-                    <li><a href="/users/taskbook"> Dashboard<a/><li>
+                    <li><a href="/users/taskbook"> Dashboard</a><li>
                     <li><a href="/users/logout">Logout</a></li>
                   {{else}}
                     <li><a href="/">Home</a></li>
@@ -38,14 +38,11 @@
               </div>
                 <div class="styleStrip">
               </div>
-          </div>
-
-            {{#if user}}
-            <div class="app-dash">
-            </div>  
-              <div class="app-wrapper" class="tg">
+          
+          {{#if user}}
+            
               {{{body}}}
-            </div>
+           </div>
            {{else}}
            <div class="innercover">
               <p class="lead">
