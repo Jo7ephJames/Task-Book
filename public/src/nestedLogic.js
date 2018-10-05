@@ -460,7 +460,7 @@ var inputPrimeScripts = {
 	editGenesis: function() {
 		var inputEdit = document.createElement('INPUT');
 		inputEdit.id = 'inputEdit';
-		inputEdit.classList.add('inputPrime');
+		inputEdit.classList.add('inputEdit');
 		inputEdit.classList.add('vanish');
 		folderDiv = 'noneOnInit';
 		inputEdit.attributes.fusedTo = 'NoneOnInit'
